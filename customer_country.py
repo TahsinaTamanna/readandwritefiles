@@ -1,5 +1,6 @@
 import csv
 
+rows =[]
 # using the csv library
 # opening the csv file in read mode
 with open("./customers.csv", "r") as customer_file:
@@ -16,6 +17,9 @@ with open("./customers.csv", "r") as customer_file:
             writer_file.writerow(
                 (column[1] + " " + column[2], column[4])
             )  # merging 2 columns for Full name
+    for row in reader_file:
+            rows.append(row)
+    print("Total number of customers read from the file: %d"%(reader_file.line_num))
 
 customer_file.close()
 customer_file_new.close()
