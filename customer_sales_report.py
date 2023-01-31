@@ -13,8 +13,7 @@ with open("./sales.csv", "r") as sales_file:
             writer_sales.writerow(
                 (
                     column[0],
-                    "$",
-                    +float(column[5]) + float(column[4]) + float(column[3]),
+                    round(float(column[5]) + float(column[4]) + float(column[3]), 2),
                 )
             )
 
