@@ -16,10 +16,11 @@ for record in employeepay_file:
     # this print statement shows that the variable record is a list
     # each element in the list corresponds to each column in the file
 
-    print("ID:", record[0])
-    print("First name:", record[1])
-    print("Last name:", record[2])
-    print("Salary:", record[3])
+    print("Employee ID:", record[0])
+    print("Name:", record[1] + " " + record[2])
+    print(
+        "Total Pay: $", round(float(record[3]) + float(record[3]) * float(record[4]), 2)
+    )
     print("Calculated Bonus: $", round(float(record[3]) * float(record[4]), 2))
 
     input()
